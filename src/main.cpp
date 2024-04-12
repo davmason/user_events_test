@@ -5,6 +5,12 @@
 #include <limits.h>
 #include <stdio.h>
 #include <string.h>
+#include <errno.h>
+#include <sys/ioctl.h>
+#include <sys/mman.h>
+#include <sys/uio.h>
+#include <fcntl.h>
+#include <unistd.h>
 #include <linux/user_events.h>
 
 const char *data_file = "/sys/kernel/tracing/user_events_data";
