@@ -40,13 +40,13 @@ int main()
 
     data_fd = open(data_file, O_RDWR);
 
-    if (event_reg(data_fd, "test u32 iteration", &write1, &enabled1) == -1)
+    if (event_reg(data_fd, "MyProviderName_L4K1 u8 eventheader_flags;u8 version;u16 id;u16 tag;u8 opcode;u8", &write1, &enabled1) == -1)
     {
         printf("error user_events: %s\n", strerror(errno));
         return errno;
     }
 
-    if (event_reg(data_fd, "test u32 iteration", &write2, &enabled2) == -1)
+    if (event_reg(data_fd, "MyProviderName_L4K1 u8 eventheader_flags;u8 version;u16 id;u16 tag;u8 opcode;u8", &write2, &enabled2) == -1)
     {
         printf("error user_events: %s\n", strerror(errno));
         return errno;
