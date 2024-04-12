@@ -4,8 +4,6 @@ project(eventing_test)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_subdirectory(LinuxTracepoints)
-
 add_compile_options(-Wno-invalid-noreturn
                     -Wno-pragma-pack
                     -Wno-int-to-pointer-cast)
