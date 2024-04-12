@@ -1,8 +1,6 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#include <eventheader/TraceLoggingProvider.h>
-
 #include <inttypes.h>
 #include <limits.h>
 #include <stdio.h>
@@ -47,6 +45,6 @@ int main()
         printf("error user_events: %s\n", strerror(errno));
         return errno;
     }
-    
+
     return 0;
 }
