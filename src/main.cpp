@@ -35,18 +35,18 @@ static int event_reg(int fd, const char *command, int *write, volatile int *enab
 
 int main()
 {
-    int data_fd, simple_write, big_write;
+    int data_fd, write1, write2, enabled1, enabled2;
     __u32 count = 0;
 
     data_fd = open(data_file, O_RDWR);
 
-    if (event_reg(data_fd, "test u32 iteration", &simple_write, &simple_enabled) == -1)
+    if (event_reg(data_fd, "test u32 iteration", &write1, &enabled1) == -1)
     {
         printf("error user_events: %s\n", strerror(errno));
         return errno;
     }
 
-    if (event_reg(data_fd, "test u32 iteration", &simple_write, &simple_enabled) == -1)
+    if (event_reg(data_fd, "test u32 iteration", &write2, &enabled2) == -1)
     {
         printf("error user_events: %s\n", strerror(errno));
         return errno;
